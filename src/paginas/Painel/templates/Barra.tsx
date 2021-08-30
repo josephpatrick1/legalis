@@ -1,5 +1,5 @@
 import { Button, Drawer, Toolbar } from "@material-ui/core"
-import { Build, Description, Group, Home, Settings } from "@material-ui/icons";
+import { Build, CalendarToday, Description, Group, Home, Settings } from "@material-ui/icons";
 import { estiloBarra } from "../estilo";
 
 export default ({ children }: { children: React.ReactNode }) => {
@@ -28,6 +28,9 @@ export default ({ children }: { children: React.ReactNode }) => {
                 </Button>
                 <Button classes={{ root: classes.button, label: classes.label }}>
                     <Description /> Modelos
+                </Button>
+                <Button classes={{ root: classes.button, label: classes.label }}>
+                    <CalendarToday /> Calendário
                 </Button>
             </div>
         </Drawer>

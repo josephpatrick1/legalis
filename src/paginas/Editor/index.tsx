@@ -33,13 +33,14 @@ export default () => {
                             plugins: [
                                 'advlist autolink lists link image charmap print preview anchor',
                                 'searchreplace visualblocks code fullscreen',
-                                'insertdatetime media table paste code help wordcount'
+                                'insertdatetime media table paste code help wordcount noneditable'
                             ],
                             toolbar: 'undo redo | formatselect | ' +
                                 'bold italic backcolor | alignleft aligncenter ' +
                                 'alignright alignjustify | bullist numlist outdent indent | ' +
-                                'removeformat | help',
-                            content_style: css
+                                'removeformat | help fullscreen',
+                            content_style: css,
+                            noneditable_editable_class: 'mce'
                         }} />
                 </Grid>
                 <Grid item xs={3}>
@@ -61,7 +62,9 @@ export default () => {
                                 <Button fullWidth endIcon={<Save />} variant="contained" className={classes.botaoAcao1}>Salvar</Button>
                             </Grid>
                             <Grid item xs={6}>
-                                <Button fullWidth endIcon={<PictureAsPdf />} variant="contained" className={classes.botaoAcao2}>PDF </Button>
+                                <Button fullWidth endIcon={<PictureAsPdf />} variant="contained" className={classes.botaoAcao2} onClick={()=>{
+                                    
+                                }}>PDF </Button>
                             </Grid>
                             <Grid item xs={6}>
                                 <Button fullWidth endIcon={<Print />} variant="contained" className={classes.botaoAcao3}>Imprimir  </Button>
